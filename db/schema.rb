@@ -10,13 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110729005003) do
+ActiveRecord::Schema.define(:version => 20110729033806) do
 
   create_table "quotes", :force => true do |t|
     t.string   "author"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "submitted_at"
+    t.integer  "up"
+    t.integer  "down"
   end
 
 end

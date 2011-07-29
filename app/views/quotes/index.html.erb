@@ -1,25 +1,10 @@
-<h1>Listing quotes</h1>
-
-<table>
-  <tr>
-    <th>Author</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @quotes.each do |quote| %>
-  <tr>
-    <td><%= quote.author %></td>
-    <td><%= simple_format(quote.content, :class => 'quote') %></td>
-    <td><%= link_to 'Show', quote %></td>
-    <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-    <td><%= link_to 'Destroy', quote, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
+<h1>ircdb: Quotes for the Masses</h1>
 <%= link_to 'New Quote', new_quote_path %>
+<br />
+<% @quotes.each do |quote| %>
+	<div class="quoteBlock">
+		<p>Quote <%= link_to quote.id, quote %> submitted by: <%= quote.author %> (<%= quote.submitted_at.utc.strftime("%F %T UTC") %>)</p>
+		<span><%= simple_format(quote.content, :class => 'quote') %></span>
+		<p><%= quote.up %> up, <%= quote.down %> down</p>
+	</div>
+<% end %>

@@ -1,3 +1,13 @@
 .quote {
 	font-family: Courier New, Lucida Console;
 }
+
+.quoteBlock {
+	padding: 8px;
+	margin: 15px;
+	font-family: Courier New, Lucida Console;
+	font-size: 13px;
+	margin-bottom: 30px;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+}
