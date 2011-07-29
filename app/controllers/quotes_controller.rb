@@ -43,7 +43,6 @@ class QuotesController < ApplicationController
     @quote = Quote.new(params[:quote])
 
     respond_to do |format|
-      @quote.submitted_at = Time.now
       @quote.up = 0
       @quote.down = 0
       if @quote.save
