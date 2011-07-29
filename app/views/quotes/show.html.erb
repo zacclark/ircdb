@@ -7,7 +7,7 @@
 
 <p>
   <b>Content:</b>
-  <%= textilize(@quote.content) %>
+  <p><%= simple_format(@quote.content, :class => 'quote') %></p>
 </p>
 
 
