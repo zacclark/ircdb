@@ -12,7 +12,7 @@
 <% @quotes.each do |quote| %>
   <tr>
     <td><%= quote.author %></td>
-    <td><%= markdown(quote.content) %></td>
+    <td><%= textilize(quote.content) %></td>
     <td><%= link_to 'Show', quote %></td>
     <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
     <td><%= link_to 'Destroy', quote, :confirm => 'Are you sure?', :method => :delete %></td>
