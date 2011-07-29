@@ -1,6 +1,3 @@
-<h1>ircdb: Quotes for the Masses</h1>
-<%= link_to 'New Quote', new_quote_path %>
-<br />
 <% @quotes.each do |quote| %>
 	<div class="quoteBlock">
 		<p>Quote <%= link_to quote.id, quote %> submitted by: <%= quote.author %></p>

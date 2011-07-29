@@ -1,4 +1,6 @@
 Ircdb::Application.routes.draw do
+  devise_for :users
+
   resources :quotes
 
   # The priority is based upon order of creation:

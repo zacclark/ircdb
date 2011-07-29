@@ -7,6 +7,11 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<h1>ircdb: Quotes for the Masses</h1>
+<%= link_to 'New Quote', new_quote_path %>
+<br />
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <%= yield %>
 
