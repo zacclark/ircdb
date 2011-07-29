@@ -43,8 +43,6 @@ class QuotesController < ApplicationController
     @quote = Quote.new(params[:quote])
 
     respond_to do |format|
-      @quote.up = 0
-      @quote.down = 0
       if @quote.save
         format.html { redirect_to(@quote, :notice => 'Quote was successfully created.') }
         format.xml  { render :xml => @quote, :status => :created, :location => @quote }
