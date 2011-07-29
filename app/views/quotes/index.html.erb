@@ -2,6 +2,6 @@
 	<div class="quoteBlock">
 		<p>Quote <%= link_to quote.id, quote %> submitted by: <%= quote.author %></p>
 		<span><%= simple_format(quote.content, :class => 'quote') %></span>
-		<p>Submitted <%= quote.created_at.utc.strftime("%F %T UTC") %>, 0 votes (<%= Quote.find(quote.id).upvotes %> up, <%= Quote.find(quote.id).downvotes %> down)</p>
+		<p>Submitted <%= quote.created_at.utc.strftime("%F %T UTC") %>, <%= quote.rating %> rating (<%= quote.upvotes.length %> up, <%= quote.downvotes.length %> down)</p>
 	</div>
 <% end %>

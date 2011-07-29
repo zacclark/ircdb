@@ -1,4 +1,4 @@
 class Vote < ActiveRecord::Base
-  has_many :upvotes
-  has_many :downvotes
+  belongs_to :user
+  belongs_to :quote
 end
